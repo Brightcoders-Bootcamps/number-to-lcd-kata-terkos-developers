@@ -10,10 +10,11 @@
 ### Parte 1
 Escribe una programa que dado un número entero (con un número arbitrario de dígitos), lo convierta en números tipo LCD utilizando el siguiente formato:
 
+```
    _  _     _  _  _  _  _  
  | _| _||_||_ |_   ||_||_|  
  ||_  _|  | _||_|  ||_| _|  
-  
+ ```
 (cada digito tiene una altura de 3 líneas)
 
 **NOTA:** Por favor, **NO** leer la segunda parte hasta completar la primera. Uno de los propósitos de esta kata es practicar la refactorización adaptando el código a cambios en los requerimientos.
