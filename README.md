@@ -24,6 +24,7 @@ Escribe una programa que dado un número entero (con un número arbitrario de d�
 Modifica el programa para soportar un número variable de ancho y alto para cada dígito.
 Por ejemplo, para ancho = 3 y alto = 2 el dígito 2 sería:
 
+```
 ___
     |
     |
@@ -31,6 +32,7 @@ ___
 |
 |
  ___
+ ```
 
 ## Requerimientos no-funcionales
 - Calidad
