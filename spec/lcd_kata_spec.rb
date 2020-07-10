@@ -7,24 +7,18 @@ RSpec.describe 'ConvertNumber' do
       expect(convert_number.number?).to eq(false)
     end
   end
-end
 
-RSpec.describe 'NumberZero' do
-  let(:number_zero) {ConvertNumber.new(0)}
-  describe '#zero' do
+  describe '#display_lcd' do
     it 'Will be zero' do
+      number_zero = ConvertNumber.new(0)
       zero = [[' ', '_', ' '], ['|', ' ', '|'], ['|', '_', '|']]
       expect(number_zero.display_lcd).to eq(zero)
     end
-  end
-end
-
-RSpec.describe 'NumberOne' do
-  let(:number_zero) {ConvertNumber.new(1)}
-  describe '#one' do
+    
     it 'Will be one' do
+      number_one = ConvertNumber.new(1)
       one = [[' ', ' ', ' '], ['|', ' ', ' '], ['|', ' ', ' ']]
-      expect(number_zero.display_lcd).to eq(one)
+      expect(number_one.display_lcd).to eq(one)
     end
   end
 end
