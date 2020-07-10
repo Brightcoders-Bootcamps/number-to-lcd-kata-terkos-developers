@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# This class is able to convert any
 class ConvertNumber
   DIGITS = [
     [[' ', '_', ' '], ['|', ' ', '|'], ['|', '_', '|']],
@@ -12,10 +15,13 @@ class ConvertNumber
     [[' ', '_', ' '], ['|', '_', '|'], [' ', '_', '|']]
   ]
 
-	attr_reader :number
+	attr_reader :number, :display
 
   def initialize(number)
     @number = number
+    @display = [[], [], []]
+
+    parse_to_display
   end
 
   def number?
@@ -23,8 +29,20 @@ class ConvertNumber
   end
   
   def display_lcd
-    DIGITS[number]
+    puts(
+      display.map do |row|
+        row.join('')
+      end.join("\n")
+    )
   end
-  
-end
 
+  private
+
+  def parse_to_display
+    number.to_s.split('').map do |digit|
+      DIGITS[digit.to_i].each_with_index do |row, index|
+        (display[index].push row)
+      end
+    end
+  end
+end
