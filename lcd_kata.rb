@@ -8,14 +8,12 @@ class ConvertNumber
   def number?
   	(number.to_i == 0) ? false : true
   end
-
-  def 
-
+  
   def display_lcd
   	case @number
-  	when 1
-  	
-  	end
+    when 0 then [[' ', '_', ' '], ['|', ' ', '|'], ['|', '_', '|']]
+    when 1 then [[' ', ' ', ' '], ['|', ' ', ' '], ['|', ' ', ' ']]
+    end
 
   end
   
